@@ -140,7 +140,7 @@ blockquote {
   line-height: 1.15;
 }
 
-.content-section__subtitle > span {
+.content-section__subtitle > .accent-span {
   height: 31.5px;
 }
 
@@ -213,14 +213,16 @@ blockquote {
   height: 20px;
 }
 
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .card__title {
   font-family: "EB Garamond", serif;
   font-size: 22px;
   font-weight: 500;
-}
-
-.card__text {
-  margin-top: 8px;
 }
 
 .footer {
