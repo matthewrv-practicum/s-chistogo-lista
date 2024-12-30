@@ -2,7 +2,7 @@ body {
   margin: 0;
   background-color: #1e1e1e;
   box-sizing: border-box;
-  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -21,6 +21,12 @@ blockquote {
   box-sizing: border-box;
 }
 
+.header {
+  padding: 24px 18.55px 24px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .content-section {
   box-sizing: border-box;
   width: 360px;
@@ -32,17 +38,6 @@ blockquote {
   color: #f5f5f5;
 }
 
-.content-section_theme_bright {
-  background-color: #fee42a;
-  color: #131313;
-}
-
-.header {
-  padding: 24px 18.55px 24px 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .header__logo-image {
   height: 16px;
   width: 79px;
@@ -51,17 +46,13 @@ blockquote {
 .header__menu-list {
   list-style: none;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.25;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.header__menu-item {
-  height: 20px;
-}
-
-.header__menu-item_active {
+.header__menu-item_active > .header__menu-link {
   text-decoration: none;
 }
 
@@ -70,33 +61,24 @@ blockquote {
 }
 
 .cover {
-  padding: 7px 0 0 20px;
+  padding: 7px 20px 5px 20px;
+  background: url(../images/cover.svg);
+  background-color: #131313;
+  background-size: 94% auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .cover-title {
-  background: url(../images/cover.svg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  font-family: "EB Garamond", sans-serif;
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
   font-weight: 400;
   font-size: 72px;
   line-height: 1;
   color: #fff;
 }
 
-.cover-title > .accent-span {
-  margin-right: 20px;
-}
-
 .accent-span {
   display: block;
-}
-
-/* Хз, почему такие отступы в макете */
-.cover-title > .accent-span:nth-child(3) {
-  padding-right: 4px;
-  padding-bottom: 5px;
 }
 
 .text-center {
@@ -105,6 +87,10 @@ blockquote {
 
 .text-right {
   text-align: right;
+}
+
+.but-not-exactly-right {
+  padding-right: 4px;
 }
 
 .intro {
@@ -133,15 +119,16 @@ blockquote {
   padding: 40px 20px 39px;
 }
 
-.content-section__subtitle {
-  font-family: "EB Garamond", sans-serif;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.15;
+.content-section_theme_bright {
+  background-color: #fee42a;
+  color: #131313;
 }
 
-.content-section__subtitle > .accent-span {
-  height: 31.5px;
+.content-section__subtitle {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.125;
 }
 
 .content-section__introduction {
@@ -192,11 +179,6 @@ blockquote {
   color: #f5f5f5;
 }
 
-.card_theme_bright {
-  background-color: #fee42a;
-  color: #131313;
-}
-
 .card__author {
   display: flex;
   flex-direction: column;
@@ -210,7 +192,7 @@ blockquote {
 
 .card__author-name {
   font-weight: 700;
-  height: 20px;
+  line-height: 1.25;
 }
 
 .card__content {
@@ -220,9 +202,15 @@ blockquote {
 }
 
 .card__title {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
   font-size: 22px;
   font-weight: 500;
+}
+
+.card_theme_bright {
+  background-color: #fee42a;
+  color: #131313;
+  padding-bottom: 22px;
 }
 
 .footer {
